@@ -9,28 +9,139 @@
     <title>Главная</title>
 </head>
 <body>
-    <header class="w-full relative">
-        <div class="flex items-center justify-between container mx-auto px-4">
+    <header class="w-full bg-[url(Assets/Images/header/bg.png)] bg-cover bg-left min-h-[600px] md:min-h-[700px] lg:min-h-[900px] px-4 flex flex-col">
+        <div class="flex items-center justify-between container mx-auto py-6 lg:py-9 text-lg font-medium relative">
             <a href="">
-                <img src="" alt="">
+                <img src="Assets/Images/header/logo.png" alt="">
             </a>
-            <nav class="flex items-center gap-4 max-lg:flex-col bg-white max-lg:absolute max-lg:w-full top-0 left-0 max-lg:-translate-y-full transition-all duration-500 max-lg:py-4" id="menu">
-                <a href="">Home</a>
-                <a href="">About Us</a>
-                <a href="">Services</a>
-                <a href="">Pages</a>
-                <a href="">Contact Us</a>
+            <nav class="flex items-center gap-8 lg:gap-[50px] max-lg:flex-col text-white max-lg:absolute max-lg:w-full top-0 left-0 max-lg:-translate-y-full transition-all duration-500 max-lg:py-4 max-lg:z-10" id="menu">
+                <a href="" class="flex flex-col after:w-0 after:h-0.5 lg:after:bg-white after:bg-black after:transition-all after:duration-500 hover:after:w-full">Home</a>
+                <a href="" class="flex flex-col after:w-0 after:h-0.5 lg:after:bg-white after:bg-black after:transition-all after:duration-500 hover:after:w-full">Location Us</a>
+                <a href="" class="flex flex-col after:w-0 after:h-0.5 lg:after:bg-white after:bg-black after:transition-all after:duration-500 hover:after:w-full">Blog</a>
+                <a href="" class="flex flex-col after:w-0 after:h-0.5 lg:after:bg-white after:bg-black after:transition-all after:duration-500 hover:after:w-full">About</a>
+                <a href="" class="flex flex-col after:w-0 after:h-0.5 lg:after:bg-white after:bg-black after:transition-all after:duration-500 hover:after:w-full">Contact</a>
+                <button class="text-white py-4 px-9 bg-[#C9453B] rounded-[5px] lg:hidden">Booking now</button>
             </nav>
+            <button class="text-white py-4 px-9 bg-[#C9453B] rounded-[5px] hidden lg:block">Booking now</button>
             <button id="toggler" type="button" class="flex flex-col w-6 gap-1 lg:hidden">
-                <span class="w-full rounded-full bg-black h-0.5"></span>
-                <span class="w-full rounded-full bg-black h-0.5"></span>
-                <span class="w-full rounded-full bg-black h-0.5"></span>
+                <span class="w-full rounded-full bg-white h-0.5"></span>
+                <span class="w-full rounded-full bg-white h-0.5"></span>
+                <span class="w-full rounded-full bg-white h-0.5"></span>
             </button>
+            <div class="absolute w-full h-full top-0 left-0 bg-black min-h-screen bg-opacity-50 hidden" id="overlay"></div>
+        </div>
+        <div class="container mx-auto flex flex-col grow justify-center gap-[30px] text-white">
+            <p class="font-bold text-4xl md:text-5xl lg:text-[65px] max-w-[804px]">Railtrips To Here, There And Everywhere!</p>
+            <p class="font-bold max-w-[458px] opacity-60">We all wish to start our year the best way possible and also according to a common belief if you have a great start to your.</p>
+            <button class="text-white py-[18px] px-12 w-fit bg-[#C9453B] rounded-[5px] mt-2.5">Explore more</button>
         </div>
     </header>  
 
-    <footer>
+    <div class="container mx-auto px-4 pt-8 md:pt-16 lg:pt-[140px] flex flex-col items-center gap-5">
+        <p class="font-medium text-2xl md:text-3xl lg:text-[43px]">Popular Location</p>
+        <p class="text-lg opacity-60 max-w-[735px] text-center">For every one of us, travel came first. We’ve spent years living as nomads, pioneers, and voyagers— from island hopping in the</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-4 md:mt-[30px]">
+            <div class="flex flex-col gap-6 md:gap-9 rounded-[10px] overflow-hidden border border-black border-opacity-10 transition-all duration-500 hover:shadow-[0_6px_35px_#ebebeb]">
+                <a href=""><img src="Assets/Images/locations/1.png" alt="" class="w-full"></a>
+                <div class="flex flex-col gap-2.5 pb-6 md:pb-8 px-4 md:px-7 items-center text-center">
+                    <p class="font-medium text-2xl">Istanbul, Turkey</p>
+                    <p class="opacity-60 text-lg">Istanbul is a major city in Turkey that straddles Europe.</p>
+                </div> 
+            </div>
+            <div class="flex flex-col gap-6 md:gap-9 rounded-[10px] overflow-hidden border border-black border-opacity-10 transition-all duration-500 hover:shadow-[0_6px_35px_#ebebeb]">
+                <a href=""><img src="Assets/Images/locations/2.png" alt="" class="w-full"></a>
+                <div class="flex flex-col gap-2.5 pb-6 md:pb-8 px-4 md:px-7 items-center text-center">
+                    <p class="font-medium text-2xl">Kuala Lumpur, malaysia</p>
+                    <p class="opacity-60 text-lg">A 272-step long trek leads you to this century.</p>
+                </div> 
+            </div>
+            <div class="flex flex-col gap-6 md:gap-9 rounded-[10px] overflow-hidden border border-black border-opacity-10 transition-all duration-500 hover:shadow-[0_6px_35px_#ebebeb]">
+                <a href=""><img src="Assets/Images/locations/3.png" alt="" class="w-full"></a>
+                <div class="flex flex-col gap-2.5 pb-6 md:pb-8 px-4 md:px-7 items-center text-center">
+                    <p class="font-medium text-2xl">Seoul, South Korea</p>
+                    <p class="opacity-60 text-lg">South Korea officially the Republic of Korea is a country in East Asia.</p>
+                </div> 
+            </div>
+        </div>
+    </div>
 
+    <div class="container mx-auto px-4 pt-8 md:pt-16 lg:pt-[140px] flex flex-col items-center gap-5">
+        <p class="font-medium text-2xl md:text-3xl lg:text-[43px]">From Blog & News</p>
+        <p class="text-lg opacity-60 max-w-[581px] text-center">Welcome to Community Conversations, a new interview series featuring Intrepid travellers, creatives and activists in our community.</p>
+        <div class="flex max-lg:flex-col gap-8 mt-8 md:mt-10 lg:mt-14">
+            <div class="flex flex-col lg:w-1/2 gap-4 md:gap-9">
+                <img src="Assets/Images/blog/1.png" alt="">
+                <div class="flex flex-col gap-2.5">
+                    <p class="font-medium text-xl">Banff National Park</p>
+                    <p class="opacity-60 text-lg">Banff National Park lies in the heart of the majestic Rocky Mountains in the province of Alberta, and showcases some of Canada's most beautiful scenery. Turquoise-colored lakes, snow-capped peaks, and glaciers are all easily accessible</p>
+                    <p class="font-medium text-xl">@thomasalva_adison</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 lg:w-1/2">
+                <div class="flex max-md:flex-col md:items-center gap-4 md:gap-7">
+                    <img src="Assets/Images/blog/2.png" alt="">
+                    <div class="flex flex-col gap-2.5">
+                        <p class="font-medium text-xl">The Hiroshima Peace!</p>
+                        <p class="opacity-60 text-lg">It was formally opened to the public in August that year.</p>
+                        <p class="font-medium text-xl">@shova_bd88</p>
+                    </div>
+                </div>
+                <div class="flex max-md:flex-col md:items-center gap-4 md:gap-7">
+                    <img src="Assets/Images/blog/3.png" alt="">
+                    <div class="flex flex-col gap-2.5">
+                        <p class="font-medium text-xl">The faithful prayers!</p>
+                        <p class="opacity-60 text-lg">A major pilgrimage center for Hindus, the holy city.</p>
+                        <p class="font-medium text-xl">@adem/smith</p>
+                    </div>
+                </div>
+                <div class="flex max-md:flex-col md:items-center gap-4 md:gap-7">
+                    <img src="Assets/Images/blog/4.png" alt="">
+                    <div class="flex flex-col gap-2.5">
+                        <p class="font-medium text-xl">Colourful waters!</p>
+                        <p class="opacity-60 text-lg">Forest-driven water and energy cycles are poorly.</p>
+                        <p class="font-medium text-xl">@jhon7leew</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="px-4 mt-8 md:mt-16 lg:mt-[140px] w-full bg-[#2694990A]">
+        <div class="container mx-auto py-8 md:py-12 lg:py-[70px] flex max-lg:flex-col gap-8 md:gap-16 xl:gap-[120px]">
+            <div class="flex flex-col gap-5 md:gap-10">
+                <a href=""><img src="Assets/Images/header/logo.png" alt="" class="invert"></a>
+                <div class="flex flex-col gap-2.5">
+                    <p>Contact us</p>
+                    <a href="mailto:@shovasatkhira88.com">@shovasatkhira88.com</a>
+                    <div class="mt-2.5 flex items-center gap-4 md:gap-7">
+                        <a href=""><img src="Assets/Images/footer/1.png" alt=""></a>
+                        <a href=""><img src="Assets/Images/footer/2.png" alt=""></a>
+                        <a href=""><img src="Assets/Images/footer/3.png" alt=""></a>
+                        <a href=""><img src="Assets/Images/footer/4.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 font-medium">
+                <a href="">Services</a>
+                <a href="">About</a>
+                <a href="">Our story</a>
+                <a href="">Benefits</a>
+                <a href="">Branding</a>
+            </div>
+            <div class="flex flex-col gap-5 font-medium">
+                <a href="">Legal</a>
+                <a href="">Terms & Conditions</a>
+                <a href="">Privecy Policy</a>
+                <a href="">Terms of use</a>
+            </div>
+            <div class="flex flex-col gap-5 md:gap-10 max-lg:self-center">
+                <p class="text-lg font-medium">SUBSCRIBE NOW</p>
+                <form action="" class="flex max-md:flex-col items-center gap-4 md:gap-9">
+                    <input type="text" class="border border-black opacity-10 shadow-[0_0_10px_10px_#d9d9d9] rounded-[5px] py-2.5 px-5 placeholder-black placeholder:text-black" placeholder="Email">
+                    <button class="rounded-[5px] py-2.5 px-8 bg-[#C9453B] text-white">Send</button>
+                </form>
+            </div>
+        </div>
     </footer>
     
 	<script src="https://code.jquery.com/jquery-3.6.3.min.js" 
