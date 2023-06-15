@@ -11,8 +11,10 @@ body {
     width: 75px;
     height: 5px;
     border-radius: 10px;
-    background: #C9453B1A;
+    background: #C9453B;
+    opacity: 10%;
 }
 .swiper-pagination-bullet-active {
     background: #C9453B;
+    opacity: 100%;
 }
